@@ -2,7 +2,7 @@ matplotlib==3.6.2
 numpy==1.23.5
 opencv_python==4.7.0.68
 pandas==1.5.2
-Pillow==9.5.0
+Pillow==10.3.0
 scikit_learn==1.2.2
 sentence_transformers==2.2.2
 tensorflow==2.11.0
