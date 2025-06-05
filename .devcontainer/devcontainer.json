@@ -1,5 +1,9 @@
 {
 	"name": "Python 3",
+	"hostRequirements": {
+		"cpus": 8,
+		"memory": "32gb"
+	},
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
@@ -8,7 +12,7 @@
 			"NODE_VERSION": "lts/*"
 		}
 	},
-	"settings": { 
+	"settings": {
 		"python.defaultInterpreterPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
@@ -23,11 +27,21 @@
 		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
 		"python.linting.pylintArgs": ["--disable=C0111"]
 	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",			
+				"ms-toolsai.jupyter"					
+			]
+		}
+	},
 	"extensions": [
 		"ms-python.python",
-		"ms-python.vscode-pylance"
+		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter"
 	],
 	"remoteUser": "vscode",
 	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
 	"postCreateCommand": "sh .devcontainer/startup.sh"
 }
+
